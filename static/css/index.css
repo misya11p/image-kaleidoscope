@@ -1,0 +1,22 @@
+body {
+    background-image: url("../images/back_kal.jpg");
+    text-align: center;
+}
+
+h1 {
+    font-size: 10em;
+    color: rgb(255, 220, 195);
+    font-family:  "筑紫A丸ゴシック";
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 3em;
+    color: rgb(255, 220, 195);
+    font-family:  "筑紫A丸ゴシック";
+    margin-bottom: 2em;
+}
+
+form {
+    color: white;
+}

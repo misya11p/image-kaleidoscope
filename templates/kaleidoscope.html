@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/kaleidoscope.css">
+    <title>万華鏡を作ろう</title>
+</head>
+<body>
+    <h1>色々な万華鏡を見てみよう！</h1>
+
+    <form action="./kaleidoscope" method="POST">
+        <button type="submit" name="name" value="1">ver 1</button>
+        <button type="submit" name="name" value="2">ver 2</button>
+        <button type="submit" name="name" value="3">ver 3</button>
+        <button type="submit" name="name" value="4">ver 4</button>
+    </form>
+
+    <div>
+        <img src="../static/tmp/kal_{{ name }}.png" id="kal_img" width="450" height="450">
+        <img src="../static/images/hole.png" id="hole" width="660" height="660">
+    </div>
+
+    <button onclick="location.href='/'">画像を選び直す</button>
+</body>
+</html>

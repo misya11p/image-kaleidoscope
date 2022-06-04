@@ -1,0 +1,45 @@
+body {
+    background-color: black;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4em;
+    color: rgb(255, 220, 195);
+    font-family:  "筑紫A丸ゴシック";
+}
+
+form {
+    margin-bottom: 2em;
+}
+
+button {
+    margin-left: 1em;
+    margin-right: 1em;
+    position: relative;
+    z-index: 1;
+}
+
+div {
+    position: relative;
+}
+
+#kal_img {
+    background-color: white;
+    animation: 6s linear infinite rotation;
+    margin-bottom: 1em;
+}
+
+#hole {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+@keyframes rotation{
+    0%{ transform:rotate(0);}
+    100%{ transform:rotate(360deg); }
+}
