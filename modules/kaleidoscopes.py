@@ -125,3 +125,47 @@ def kal_3(path):
     plt.scatter(imgnew1[0], imgnew1[1], s=1, color="black")
     plt.scatter(imgnew2[0], imgnew2[1], s=1, color="gray")
     plt.axis('equal')
+
+
+def kal_4(path):
+    img = imgfile2xy(path)
+    imgnew1 = img + np.array([-200, 0]).reshape(-1, 1)
+    # データ行列の3行目に1が成分の行を追加する
+    img2 = np.insert(img, 2, 1, axis=0)
+
+    imgnew2 = np.dot(a2, img2)
+
+    # 変換後のデータ行列の3行目を消去
+    imgnew2 = np.delete(imgnew2, 2, axis=0)
+    imgnew2 = imgnew2 + np.array([-100, 0]).reshape(-1, 1)
+
+    # データ行列の3行目に1が成分の行を追加する
+    img3 = np.insert(img, 2, 1, axis=0)
+
+    imgnew3 = np.dot(a2, img3)
+
+    # 変換後のデータ行列の3行目を消去
+    imgnew3 = np.delete(imgnew3, 2, axis=0)
+    imgnew3 = imgnew3 + np.array([200, 200]).reshape(-1, 1)
+
+    imgnew4 = img + np.array([100, 200]).reshape(-1, 1)
+
+    # データ行列の3行目に1が成分の行を追加する
+    img5 = np.insert(img, 2, 1, axis=0)
+
+    imgnew5 = np.dot(a2, img5)
+
+    # 変換後のデータ行列の3行目を消去
+    imgnew5 = np.delete(imgnew5, 2, axis=0)
+    imgnew5 = imgnew5 + np.array([-100, 400]).reshape(-1, 1)
+
+    imgnew6 = img + np.array([100, -200]).reshape(-1, 1)
+
+    plt.scatter(img[0], img[1], s=1, color="black")
+    plt.scatter(imgnew1[0], imgnew1[1], s=1, color="black")
+    plt.scatter(imgnew2[0], imgnew2[1], s=1, color="gray")
+    plt.scatter(imgnew3[0], imgnew3[1], s=1, color="gray")
+    plt.scatter(imgnew4[0], imgnew4[1], s=1, color="black")
+    plt.scatter(imgnew5[0], imgnew5[1], s=1, color="gray")
+    plt.scatter(imgnew6[0], imgnew6[1], s=1, color="black")
+    plt.axis('equal')
